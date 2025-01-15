@@ -1,14 +1,66 @@
 # Project-Hotel
-This repository contains a pet project on the subject of "Hotel Information System".
-This project includes:
- - User's database
- - Room's database
- - Client application for applying for a lease
+# Гостиница «Каспий» - Система управления
 
-# How to use it?
-It's simple! It is enough to run the following files before starting the simulation:
-- edit_db.py
-- init_rooms_db.py
-Next, run the file **hotel_gui.py** and enjoy the process.
+## Как пользоваться?
 
-**Recommended python version == 3.10**
+1. Установить Python 3.10, все необходимые модули:
+```bash
+pip install -r requirements.txt
+```
+2. Запустить hotel_gui.py или admin_panel.py, инициализация баз данных происходит автоматически.
+
+## Основные возможности
+
+### Для клиентов (hotel_gui.py):
+- Бронирование номеров (эконом, комфорт, люкс)
+- Выбор дополнительных услуг:
+  * Проживание с животными
+  * Размещение с детьми
+  * Экскурсионные туры
+  * Парковка
+  * Транспортные услуги (каршеринг, водный транспорт)
+- Гибкая система оплаты (карта/безналичный расчет)
+- Изменение дат бронирования
+
+### Для администраторов (admin_panel.py):
+- Управление записями клиентов
+- Фильтрация по:
+  * Датам заезда/выезда
+  * Типам номеров
+  * Дополнительным услугам
+- Редактирование данных клиентов
+- Управление персоналом
+
+## Структура проекта
+
+### Основные модули:
+- main.py (299 строк) - основная бизнес-логика
+- hotel_gui.py (411 строк) - интерфейс для клиентов
+- admin_panel.py (990 строк) - панель администратора
+- init_dbs.py, init_rooms_db.py, edit_db.py (154 строки) - работа с базами данных
+
+### База данных:
+- 2 файла SQLite
+- 4 таблицы для хранения данных о:
+  * Клиентах
+  * Номерах
+  * Администраторах
+  * Услугах
+
+## Технические требования
+- Python 3.10 или выше
+- SQLite3
+- Tkinter (для GUI)
+- Операционная система: Windows
+
+## Статистика проекта
+- Общее количество строк кода: 1854
+- Количество таблиц в БД: 4
+- Количество Python-модулей: 6
+
+## Использованные ресурсы
+- https://ru.stackoverflow.com
+- https://stackoverflow.com
+- https://ru.wikihow.com
+- https://chatgpt.com
+- https://open.spotify.com/
